@@ -4,9 +4,6 @@ import { steps } from '../../data/siteData'
 import AnimatedSection from '../ui/AnimatedSection'
 import SectionHeader from '../ui/SectionHeader'
 
-/** Icon row Y from top of each card (p-7 + step chip + gap + half of 48px icon). */
-const TIMELINE_TOP_LG = '5.625rem'
-
 export default function HowItWorks() {
   return (
     <section id="how" className="section-muted section-pad relative overflow-hidden border-b border-slate-200/80">
@@ -30,28 +27,6 @@ export default function HowItWorks() {
 
         <div className="relative mt-12 lg:mt-14">
           <ol className="relative grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-            {/* Desktop: one continuous timeline through all step nodes */}
-            <motion.div
-              className="pointer-events-none absolute left-0 right-0 z-[1] hidden lg:block"
-              style={{ top: TIMELINE_TOP_LG }}
-              aria-hidden
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="absolute left-[12.5%] right-[12.5%] top-1/2 h-[3px] -translate-y-1/2 overflow-hidden rounded-full">
-                <motion.div
-                  className="process-connector h-full w-full rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-                  style={{ transformOrigin: 'left center' }}
-                />
-              </div>
-            </motion.div>
-
             {steps.map((step, i) => {
               const Icon = step.icon
               return (

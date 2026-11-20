@@ -125,19 +125,6 @@ body {
   @apply inline-flex items-center gap-2 rounded-full border border-brand-200/80 bg-white/95 px-4 py-1.5 text-xs font-semibold text-brand-800 shadow-sm backdrop-blur-sm sm:text-sm;
 }
 
-.process-connector {
-  background: linear-gradient(
-    90deg,
-    var(--color-brand-200),
-    var(--color-brand-500) 30%,
-    var(--color-brand-600) 70%,
-    var(--color-brand-300)
-  );
-  box-shadow:
-    0 0 0 1px rgba(17, 94, 140, 0.1),
-    0 1px 2px rgba(17, 94, 140, 0.15);
-}
-
 @keyframes float {
   0%,
   100% {
