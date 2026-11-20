@@ -1,0 +1,42 @@
+QuickLeads v1.0.0 Notes
+
+Features Included -
+
+NOTE - this is mvp version of the app so limited features were included
+
+MVP Features -
+
+
+1. Login
+2. Create Group
+3. Create Form - 2 Templates Already to be given , Create Custom
+4. Invite Salesman
+5. Lead Details
+6. Copy Link - Form
+7. Logs of Salesman
+8. Export Leads Captured by Filters
+9. Profile -> Set Name
+10. Logout
+11. Remove or deactivate salesman in a group
+12. Assign / unassign forms to specific salesmen
+13. Enable / disable form with Expiry
+
+
+Salesman -
+
+
+1. Login
+2. Join Group -> From Invitation or Group ID
+3. See Assigned Forms List
+4. Add Lead Button -> to capture leads , Confirm Lead Screen with Preview    
+5. QR Generation -> PDF , Copy form Link
+6. View Recent Leads List without Details
+7. Profile -> Set Name
+8. Logout
+
+
+Others - 
+Pull-to-refresh 
+In-app notifications for new leads / invites
+Offline capture + sync when back online (events, poor network)
+Search on recent leads list (name/phone only, no full detail screen)

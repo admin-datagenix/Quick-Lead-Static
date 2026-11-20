@@ -1,0 +1,312 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QuickLeads Privacy Policy</title>
+<meta name="description" content="How QuickLeads collects, uses, shares and protects personal data, and how to delete your account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sticky nav → title block → sticky contents rail beside a 68ch reading column → footer */
+:root{
+  --bg:#FFFFFF; --bg-soft:#F2F8FC; --ink:#0B1B2B; --muted:#4A5E71; --line:#DCE7F0;
+  --sky:#0EA5E9; --sky-text:#0369A1; --sky-tint:#E3F3FC; --btn:#0369A1; --on-btn:#FFFFFF;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#08131D; --bg-soft:#0D1C29; --ink:#E6F0F7; --muted:#9DB2C4; --line:#1D3243;
+  --sky:#38BDF8; --sky-text:#7DD3FC; --sky-tint:#0F2A3D; --btn:#0369A1; --on-btn:#FFFFFF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#08131D; --bg-soft:#0D1C29; --ink:#E6F0F7; --muted:#9DB2C4; --line:#1D3243;
+  --sky:#38BDF8; --sky-text:#7DD3FC; --sky-tint:#0F2A3D; --btn:#0369A1; --on-btn:#FFFFFF; color-scheme:dark}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--sky-text)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo b{color:var(--sky-text)}
+.logo-mark{width:32px;height:32px;border-radius:9px;background:var(--btn);display:grid;place-items:center}
+.back{margin-left:auto;color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+.back:hover{color:var(--ink)}
+.title{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.title .wrap{padding-block:56px 44px;display:grid;gap:12px}
+.eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-text)}
+h1,h2{font-family:var(--f-display);letter-spacing:-.02em;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(34px,5vw,52px)}
+.meta{color:var(--muted);font-size:15px}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;padding-block:48px 80px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px);align-self:start;font-size:14.5px}
+.toc p{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.toc ol{margin:0;padding:0;list-style:none;display:grid;gap:6px;counter-reset:t}
+.toc li{counter-increment:t}
+.toc a{color:var(--muted);text-decoration:none;display:grid;grid-template-columns:26px 1fr}
+.toc a::before{content:counter(t);font-family:var(--f-mono);font-size:12px;color:var(--sky-text);padding-top:2px}
+.toc a:hover{color:var(--ink)}
+article{max-width:68ch;min-width:0;counter-reset:s}
+article > p:first-child{font-size:18px;color:var(--ink)}
+section{padding-top:36px;counter-increment:s}
+section h2{font-size:25px;display:flex;gap:12px;align-items:baseline}
+section h2::before{content:counter(s);font-family:var(--f-mono);font-size:14px;color:var(--sky-text);min-width:22px}
+h3{font-size:17px;margin:22px 0 4px}
+p,li{color:var(--ink)}
+p{margin:12px 0}
+ul{padding-left:22px;margin:12px 0;display:grid;gap:6px}
+.muted{color:var(--muted)}
+.note{background:var(--sky-tint);border-radius:12px;padding:14px 18px;margin:16px 0}
+.note p{margin:0}
+.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--bg-soft);font-weight:600}
+tr:last-child td{border-bottom:0}
+.ph{background:color-mix(in srgb,var(--sky) 20%,transparent);border-radius:4px;padding:0 4px}
+.steps{counter-reset:d;list-style:none;padding:0}
+.steps li{counter-increment:d;display:grid;grid-template-columns:30px 1fr;gap:8px}
+.steps li::before{content:counter(d);width:24px;height:24px;border-radius:50%;background:var(--btn);color:var(--on-btn);font-size:13px;font-weight:700;display:grid;place-items:center;margin-top:3px}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+footer a{color:var(--muted);text-decoration:none}
+footer b{color:var(--sky-text)}
+@media (max-width:900px){.layout{grid-template-columns:1fr;gap:28px}.toc{position:static;border:1px solid var(--line);border-radius:12px;padding:16px 18px}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="QuickLeads home">
+      <span class="logo-mark"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 20h-3"/></svg></span>
+      Quick<b>Leads</b>
+    </a>
+    <a class="back" href="index.html">← Back to website</a>
+  </div>
+</header>
+
+<div class="title">
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: 24 October 2026 · Applies to the QuickLeads Android app, the QuickLeads web dashboard, lead forms opened by QR code or link, and this website.</p>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#roles">Whose data it is</a></li>
+      <li><a href="#collect">What we collect</a></li>
+      <li><a href="#not-collect">What we don’t collect</a></li>
+      <li><a href="#use">How we use data</a></li>
+      <li><a href="#share">Who we share it with</a></li>
+      <li><a href="#retention">How long we keep it</a></li>
+      <li><a href="#security">How we protect it</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#delete-account">Delete your account</a></li>
+      <li><a href="#storage">Cookies &amp; device storage</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact &amp; grievance officer</a></li>
+    </ol>
+  </nav>
+
+  <article>
+    <p>QuickLeads helps businesses collect enquiries from visitors at exhibitions, trade shows and events. This policy explains what personal data QuickLeads handles, why, and the choices you have. We wrote it to match how the app actually works.</p>
+
+    <section id="who">
+      <h2>Who we are</h2>
+      <p>QuickLeads (“QuickLeads”, “we”, “us”) is provided by DatagenixAI LLP, DatagenixAI, India, India, under the name “QuickLeads by DatagenixAI”.</p>
+      <p>We process personal data in line with the Information Technology Act, 2000, the Digital Personal Data Protection Act, 2023, and the rules made under them.</p>
+    </section>
+
+    <section id="roles">
+      <h2>Whose data it is</h2>
+      <p>Three kinds of people use QuickLeads, and our role differs for each.</p>
+      <ul>
+        <li><strong>Admins</strong> create a company group, build lead forms and invite salesmen. For their account data, we decide how it is used.</li>
+        <li><strong>Salesmen</strong> join a group by invitation and capture leads. For their account data, we decide how it is used.</li>
+        <li><strong>Visitors</strong> (the people whose details are captured as leads) give their details to the business running the stall. That business decides how the lead is used. We store and process lead data on the business’s behalf and only to provide QuickLeads to it.</li>
+      </ul>
+      <div class="note"><p>If you are a visitor and want to know what a business did with your details, contact that business first. We will help it respond to you.</p></div>
+    </section>
+
+    <section id="collect">
+      <h2>What we collect</h2>
+      <h3>Account information</h3>
+      <ul>
+        <li>Your mobile number, used to sign in with a one-time password (OTP).</li>
+        <li>Your name, which you enter when you join a group or edit your profile.</li>
+        <li>The groups you belong to, your role in each, and your salesman ID.</li>
+      </ul>
+      <h3>Company details entered by admins</h3>
+      <ul><li>Company name, group name, contact person, contact mobile and email, website and address. These appear on printed QR pages and in lead follow-up messages.</li></ul>
+      <h3>Lead information</h3>
+      <ul>
+        <li>The fields on every form: first name, last name, mobile number and “enquiry about”.</li>
+        <li>Any other fields the admin adds to a form, such as email, company, city, dates, numbers or notes. The admin decides which fields to ask for.</li>
+        <li>When and how the lead was captured: the form, the salesman, the time, and whether it came from the app, a QR code or a link.</li>
+      </ul>
+      <div class="note"><p><strong>Forms opened by QR code or link save as you type.</strong> When a visitor fills a QuickLeads form in a browser, what they have entered is saved every few seconds, before they press Submit. If they leave without submitting, the business can still see the details entered and follow up. This is shown on the form as “Progress saved”.</p></div>
+      <h3>Usage and device information</h3>
+      <ul>
+        <li>Sign-in and sign-out times of each user, shown to admins as salesman logs.</li>
+        <li>Actions in a group such as capturing a lead, sending or accepting an invitation, assigning a form, or exporting leads.</li>
+        <li>The device’s operating system and version, the app version, and the IP address of requests. We use these for security, fraud prevention and support.</li>
+        <li>A history of lead exports: the file name, number of rows, filters used, who exported it and when.</li>
+      </ul>
+      <h3>Payment information</h3>
+      <p>If you buy a paid plan, payment is handled by our payment provider. We receive the plan, amount, transaction reference and status. We do not receive or store your card, UPI PIN or bank account details.</p>
+    </section>
+
+    <section id="not-collect">
+      <h2>What we don’t collect</h2>
+      <p>The QuickLeads app does not access your location, contacts, photos, camera, microphone or SMS inbox. It does not use advertising IDs and shows no ads. Calls and WhatsApp messages you start from a lead open your phone’s own apps. QuickLeads does not see their contents.</p>
+    </section>
+
+    <section id="use">
+      <h2>How we use data</h2>
+      <ul>
+        <li>To sign you in and keep your session secure.</li>
+        <li>To run the service: groups, forms, invitations, lead capture, QR pages, search, filters, analytics and exports.</li>
+        <li>To send messages the service needs: OTPs by SMS, invitations, and in-app notifications about forms and leads.</li>
+        <li>To send a WhatsApp confirmation to a visitor after they submit a form, only when the admin has turned this on for their group.</li>
+        <li>To flag a lead whose mobile number was already captured in the same group.</li>
+        <li>To prevent abuse, investigate problems and provide support.</li>
+        <li>To bill paid plans and keep financial records required by law.</li>
+      </ul>
+      <p>We do not sell personal data. We do not use lead data for advertising, and we do not share one business’s leads with another business.</p>
+    </section>
+
+    <section id="share">
+      <h2>Who we share it with</h2>
+      <h3>Inside your group</h3>
+      <ul>
+        <li>Admins of a group can see all leads captured in that group, its salesmen, and their activity logs.</li>
+        <li>Salesmen see only the name and capture time of the leads they captured themselves, and the forms assigned to them.</li>
+      </ul>
+      <h3>Service providers</h3>
+      <p>We use these providers to run QuickLeads. They may process data only on our instructions.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr><th scope="col">Provider</th><th scope="col">Purpose</th><th scope="col">Data involved</th></tr></thead>
+          <tbody>
+            <tr><td>Amazon Web Services (AWS) / Google Cloud</td><td>Servers and database</td><td>All data described in this policy</td></tr>
+            <tr><td>MSG91 / Fast2SMS</td><td>OTP and invitation SMS</td><td>Mobile number, message text</td></tr>
+            <tr><td>Meta (WhatsApp Business Platform)</td><td>Visitor confirmations, when enabled</td><td>Visitor mobile number, first name, company and form name</td></tr>
+            <tr><td>Razorpay</td><td>Paid plans</td><td>Plan, amount, billing contact</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Legal reasons</h3>
+      <p>We may disclose data when Indian law, a court order or a government authority requires it, or to protect the rights and safety of our users and the public.</p>
+    </section>
+
+    <section id="retention">
+      <h2>How long we keep it</h2>
+      <ul>
+        <li><strong>Accounts:</strong> while your account is active. When you delete it, we delete or anonymise your account data within 30 days.</li>
+        <li><strong>Leads and forms:</strong> as long as the business’s group is active, or until its admin deletes them. Removing a salesman from a group does not delete the leads they captured; those stay with the business.</li>
+        <li><strong>OTPs:</strong> expire after 5 minutes and cannot be reused.</li>
+        <li><strong>Activity logs:</strong> 12 months.</li>
+        <li><strong>Export files:</strong> 90 days on our servers, then deleted. Files you have downloaded stay on your device.</li>
+        <li><strong>Billing records:</strong> as long as tax and accounting law requires.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2>How we protect it</h2>
+      <ul>
+        <li>All traffic between the app, forms and our servers uses HTTPS.</li>
+        <li>OTPs and session refresh tokens are stored only as one-way hashes. Sign-in tokens on your phone are kept in the device’s secure storage.</li>
+        <li>Every request is checked against your role in the group, so users only reach data they are allowed to see.</li>
+        <li>Sign-in attempts, OTP requests and public forms are rate-limited to stop abuse.</li>
+        <li>Leads captured offline stay on the phone only until they are uploaded.</li>
+      </ul>
+      <p>No system is completely secure. If a breach affects your personal data, we will notify you and the authorities as the law requires.</p>
+    </section>
+
+    <section id="rights">
+      <h2>Your rights</h2>
+      <p>Under Indian data protection law you can:</p>
+      <ul>
+        <li>Ask what personal data we hold about you and how we use it.</li>
+        <li>Correct or update it. You can change your name in the app under Profile.</li>
+        <li>Ask us to erase it, subject to records we must keep by law.</li>
+        <li>Withdraw consent. This may stop parts of the service from working for you.</li>
+        <li>Nominate another person to exercise these rights if you die or become unable to.</li>
+        <li>Raise a grievance with our grievance officer, and then with the Data Protection Board of India if you are not satisfied.</li>
+      </ul>
+      <p>To use these rights, contact us using the details in <a href="#contact">section 14</a>. We may ask you to confirm your mobile number before acting on a request.</p>
+    </section>
+
+    <section id="delete-account">
+      <h2>Delete your account</h2>
+      <p>You can ask us to delete your QuickLeads account and its data at any time, from inside the app or without it.</p>
+      <ol class="steps">
+        <li><span>Send a request from the mobile number registered on your account, by email to info@datagenix.in or by WhatsApp to +91 73852 56569. In the app you can find these under Profile → Help &amp; Support.</span></li>
+        <li><span>Write “Delete my QuickLeads account” and your registered mobile number.</span></li>
+        <li><span>We confirm the request, usually within 2 working days, and complete the deletion within 30 days.</span></li>
+      </ol>
+      <h3>What gets deleted</h3>
+      <ul>
+        <li>Your profile, name, mobile number, group memberships and sign-in sessions.</li>
+        <li>If you own a group: the group, its forms and its leads, unless another admin takes it over first.</li>
+      </ul>
+      <h3>What we keep</h3>
+      <ul>
+        <li>If you are a salesman, leads you captured belong to the business and stay with it. Your name on those leads is kept so the business knows who captured them.</li>
+        <li>Billing records we must keep by law.</li>
+      </ul>
+    </section>
+
+    <section id="storage">
+      <h2>Cookies &amp; device storage</h2>
+      <p>This website does not use advertising or analytics cookies.</p>
+      <p>When a visitor opens a QuickLeads form, the browser stores a random session code. It links the visitor’s partly filled form to one record, so the visitor isn’t counted twice. It is removed when they submit.</p>
+      <p>The app stores sign-in tokens, the selected group, a copy of assigned forms and any leads waiting to sync on the phone, so it works without signal.</p>
+    </section>
+
+    <section id="children">
+      <h2>Children</h2>
+      <p>QuickLeads is a business tool for people aged 18 and over. We do not knowingly collect data from children. If you believe a child’s data has been entered, contact us and we will delete it.</p>
+    </section>
+
+    <section id="changes">
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy as QuickLeads changes or the law changes. We will change the “Last updated” date above. For significant changes, we will also tell you in the app before they take effect.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact &amp; grievance officer</h2>
+      <p>For privacy questions, data requests or complaints, contact our grievance officer:</p>
+      <div class="note">
+        <p><strong>Grievance Officer, DatagenixAI</strong>, Grievance Officer<br>
+        DatagenixAI LLP, DatagenixAI, India<br>
+        Email: info@datagenix.in<br>
+        Phone: +91 73852 56569</p>
+      </div>
+      <p class="muted">We will acknowledge your complaint and resolve it within the time required by applicable law.</p>
+    </section>
+  </article>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 QuickLeads by <b>DatagenixAI</b></div>
+    <a href="index.html">Back to website</a>
+  </div>
+</footer>
+</body>
+</html>
